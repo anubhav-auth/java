@@ -12,6 +12,6 @@ public class Q1 {
         check(a,b,c);
     }
     static boolean check(int a, int b, int c){
-        return ((a+b == c) && (a == b-c) || (a*b == c));
+        return ((a+b == c) || (a == b-c) || (a*b == c));
     }
 }

@@ -5,19 +5,22 @@ import java.util.Scanner;
 public class Q10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int r = 3;
-        int c = 4;
+        System.out.println("enter row ");
+        int r = sc.nextInt();
+        System.out.println("enter column ");
+        int c = sc.nextInt();
         double [] [] ar = new double[r][c];
-
+        System.out.println("enter elements");
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
-
-
                 ar[i][j] = sc.nextDouble();
             }
         }
 
-        System.out.println(sumColumn(ar , 2));
+        for (int i = 0; i < c; i++){
+            System.out.println(sumColumn(ar , i));
+        }
+
     }
 
     public static double sumColumn(double[][] m, int columnIndex){

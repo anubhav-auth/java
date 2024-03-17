@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Q6 {
     public static boolean isOdd(int n){
 
-        String s = Integer.toBinaryString(n);
-        return s.charAt(s.length() - 1) == '1';
+        return ((n&1) == 1);
 
     }
     public static void main(String[] args) {
