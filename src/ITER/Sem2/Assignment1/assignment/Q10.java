@@ -5,10 +5,8 @@ import java.util.Scanner;
 public class Q10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter row ");
-        int r = sc.nextInt();
-        System.out.println("enter column ");
-        int c = sc.nextInt();
+        int r = 3;
+        int c = 4;
         double [] [] ar = new double[r][c];
         System.out.println("enter elements");
         for (int i = 0; i < r; i++) {

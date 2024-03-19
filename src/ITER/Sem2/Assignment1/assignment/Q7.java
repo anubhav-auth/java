@@ -28,7 +28,7 @@ public class Q7 {
                 countermax ++;
                 if (!c){
                     maxin = i;
-                    c = !c;
+                    c = true;
                 }
             }
 
