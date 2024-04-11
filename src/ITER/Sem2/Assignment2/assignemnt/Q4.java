@@ -1,3 +1,5 @@
+package ITER.Sem2.Assignment2.assignemnt;
+
 class Deposit{
 	long principle;
 	int time;

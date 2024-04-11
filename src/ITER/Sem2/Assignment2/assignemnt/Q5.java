@@ -1,3 +1,5 @@
+package ITER.Sem2.Assignment2.assignemnt;
+
 class person1{
 	int age;
 	String name;

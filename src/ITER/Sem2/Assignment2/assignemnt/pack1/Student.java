@@ -1,4 +1,4 @@
-package pack1;
+package ITER.Sem2.Assignment2.assignemnt.pack1;
 
 import java.util.Scanner;
 

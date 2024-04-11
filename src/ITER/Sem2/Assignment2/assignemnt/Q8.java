@@ -1,9 +1,9 @@
 package ITER.Sem2.Assignment2.assignemnt;
 
-import pack1.Test;
-import pack2.sports;
+import ITER.Sem2.Assignment2.assignemnt.pack2.sports;
+import ITER.Sem2.Assignment2.assignemnt.pack1.Test;
 
-public class Q8 implements sports{
+public class Q8 implements sports {
 
 
 	public static void main(String[] args) {

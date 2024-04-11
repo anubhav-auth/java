@@ -1,10 +1,8 @@
-package pack1;
+package ITER.Sem2.Assignment2.assignemnt.pack1;
 
 import java.util.Scanner;
 
-import pack2.sports;
-
-public class Test extends Student{
+public class Test extends Student {
 	
 	public double mark1;
 	public double mark2;

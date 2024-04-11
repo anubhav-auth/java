@@ -1,4 +1,4 @@
-package pack2;
+package ITER.Sem2.Assignment2.assignemnt.pack2;
 
 public interface sports {
 	double score1 = 1;
