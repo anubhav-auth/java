@@ -1,36 +1,45 @@
 package ITER.Sem2.Assignment2.assignemnt;
 
-class complex {
-    int real;
-    int imag;
-    public void setdata(int real,int imag){
-        this.real=real;
-        this.imag=imag;
-    }
-    public void display(){
-        System.out.println(real+"+"+"i"+imag);
-    }
-    public complex add(complex num1,complex num2){
-        complex result=new complex();
-        result.real= num1.real+num2.real;
-        result.imag= num1.imag+ num2.imag;
+import java.util.Scanner;
 
-        return result;
-    }
-
+class product{
+	int prodId;
+	int price;
+	int quantity;
+	
+	static int totalPrice = 0;
+	
+	product(int prodid, int price, int quantity){
+		this.prodId = prodid;
+		this.price = price;
+		this.quantity = quantity;
+		totalPrice += price * quantity;
+	}
+	
+	public void display() {
+		System.out.println("product ID: " + prodId + "  Price: " + price + "  quantity: " +quantity);
+	}
 }
-public class Q3{
-    public static void main(String[] args) {
-        complex complex1=new complex();
-        complex1.setdata(2,3);
-        complex complex2=new complex();
-        complex2.setdata(4,5);
-        complex1.display();
-        complex2.display();
-        complex sum=new complex();
-        sum=sum.add(complex1,complex2);
-        sum.display();
-    }
+public class Q3 {
 
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		product[] pra = new product[5];
+
+		for (int i = 0; i<5; i++){
+			int proid = sc.nextInt();
+			int price = sc.nextInt();
+			int quantity = sc.nextInt();
+
+			pra[i] = new product(proid, price, quantity);
+		}
+
+		for (int i = 0; i < 5; i++) {
+			pra[i].display();
+		}
+		
+		System.out.println(" \n\ntotal price of all items is " + (product.totalPrice));
+
+	}
 
 }

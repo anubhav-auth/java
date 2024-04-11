@@ -1,36 +1,34 @@
-package ITER.Sem2.Assignment2.assignemnt;
-
-class Person{
-    int age;
-    String name;
-
-    Person(String name, int age){
-        this.age = age;
-        this.name = name;
-    }
+class person1{
+	int age;
+	String name;
+	
+	person1(int age , String name){
+		this.age = age;
+		this.name = name;
+	}
 }
-
-class employee extends Person{
-    int eid;
-    int salary;
-    employee(String name, int age, int eid, int salary) {
-        super(name, age);
-        this.eid = eid;
-        this.salary = salary;
-    }
-    public void empDisplay(){
-        System.out.println(super.name);
-        System.out.println(super.age);
-        System.out.println(this.eid);
-        System.out.println(this.salary);
-    }
+class employee extends person1{
+	int eId;
+	double salary;
+	
+	employee(int age, String name, int eId, double salary){
+		super(age, name);
+		
+		this.eId = eId;
+		this.salary = salary;
+		
+	}
+	
+	void empDisplay(){
+		System.out.println("eid: " + eId + " name: "+ name + " age: " + age + " salary: " + salary);
+	}
+	
+	
 }
-
-
-
 public class Q5 {
-    public static void main(String[] args) {
-        employee e = new employee("harry", 21, 1245, 10000);
-        e.empDisplay();
-    }
+	public static void main(String[] args) {
+		employee e1 = new employee(21, "rohan", 21154, 500000.00);
+		
+		e1.empDisplay();
+	}
 }
