@@ -30,7 +30,7 @@ class person2 implements detailInfo{
 public class Q7 {
 
 	public static void main(String[] args) {
-		person2 p1 = new person2("roihan");
+		person2 p1 = new person2("rohan");
 		p1.display();
 	}
 
