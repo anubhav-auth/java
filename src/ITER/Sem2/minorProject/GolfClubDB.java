@@ -1,16 +1,16 @@
 package ITER.Sem2.minorProject;
 
 class Member{
-    private int MemberID;
-    private String LastName;
-    private String FirstName;
-    private int Handicap;
-    private char Gender;
-    private String Team;
-    private String MemberType;
-    private int Coach;
-    private long Phone;
-    private Date JoinDate;
+    private final int MemberID;
+    private final String LastName;
+    private final String FirstName;
+    private final int Handicap;
+    private final char Gender;
+    private final String Team;
+    private final String MemberType;
+    private final int Coach;
+    private final long Phone;
+    private final Date JoinDate;
 
     public Member(int memberID, String lastName, String firstName, int handicap, char gender, String team, String memberType, int coach, long phone, Date joinDate) {
         MemberID = memberID;
@@ -72,9 +72,9 @@ class Member{
 
 }
 class Date{
-    private int day;
-    private String month;
-    private int year;
+    private final int day;
+    private final String month;
+    private final int year;
 
     public Date(int day, String month, int year) {
         this.day = day;
