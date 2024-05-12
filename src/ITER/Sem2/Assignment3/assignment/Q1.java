@@ -1,24 +1,22 @@
 package ITER.Sem2.Assignment3.assignment;
 
-class base{
-    base(){
-        System.out.println("base");
-    }
-}
+import java.util.Scanner;
 
-class derived1 extends base{
-    derived1(){
-        System.out.println("derived1");
-    }
-}
-
-class derived2 extends derived1{
-    derived2(){
-        System.out.println("derived2");
-    }
-}
 public class Q1 {
     public static void main(String[] args) {
-        derived2 obj = new derived2();
+        Scanner sc = new Scanner(System.in);
+
+        try{
+            System.out.println("enter no");
+            int n = sc.nextInt();
+            if(n<0) {
+                throw new NumberFormatException();
+            }
+            else {
+                System.out.println("Lucky number is " + n);
+            }
+        }catch (NumberFormatException e){
+            System.out.println("Invalid input");
+        }
     }
 }

@@ -1,7 +1,5 @@
 package ITER.Sem2.minorProject;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 class Member{
     private int MemberID;
     private String LastName;
