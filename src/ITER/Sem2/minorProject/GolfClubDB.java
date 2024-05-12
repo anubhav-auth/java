@@ -66,9 +66,7 @@ class Member{
     }
 
     public void display(){
-        System.out.println("Member ID: " + MemberID + "\nLast Name: " + LastName + "\nFirst Name: " + FirstName + "\nHandicap: " + ((Handicap == -1)? null:Handicap) + "\nGender: " + Gender + "\nTeam: " + ((Team.equals("-1"))? null:Team) + "\nMember Type: " + MemberType + "\nCoach: " +((Coach == -1)? null:Coach) + "\nPhone: " + Phone + "\nJoin Date: " + JoinDate.getDay() + " " + JoinDate.getMonth() + " " + JoinDate.getYear() + "\n");
-
-        System.out.println();
+        System.out.println("Member ID: " + MemberID + "\t\tLast Name: " + LastName + "\t\t\tFirst Name: " + FirstName + "\t\tHandicap: " + ((Handicap == -1)? null:Handicap) + "\tGender: " + Gender + "\tTeam: " + ((Team.equals("-1"))? null:Team) + "\t\t\tMember Type: " + MemberType + "\t\tCoach: " +((Coach == -1)? null:Coach) + "\tPhone: " + Phone + "\tJoin Date: " + JoinDate.getDay() + " " + JoinDate.getMonth() + " " + JoinDate.getYear() + "\n");
     }
 
 
@@ -196,8 +194,9 @@ public class GolfClubDB {
     public static void main(String[] args) {
         initialiseMembers();
         Filter memberFilter = new Filter();
-//        memberFilter.joinDate(new Date(7, "APRIL", 9), members);
-//        memberFilter.seniorHandicapScore(members);
+
+        memberFilter.joinDate(new Date(7, "APRIL", 9), members);
+        memberFilter.seniorHandicapScore(members);
         memberFilter.seniorFemaleTeamB(members);
     }
     public static void initialiseMembers(){
