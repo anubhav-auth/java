@@ -13,9 +13,7 @@ public class Q2 {
             }
 
         } catch (NullPointerException e) {
-
             System.out.println("Exception caught: Attempted to access an index that doesn't exist.");
-
         }catch (ArrayIndexOutOfBoundsException e) {
 
             System.out.println("Exception caught: Attempted to access an index beyond the array length.");

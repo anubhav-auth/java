@@ -5,7 +5,6 @@ import ITER.Sem2.Assignment2.assignemnt.pack1.Test;
 
 public class Q8 implements sports {
 
-
 	public static void main(String[] args) {
 		
 		Test t = new Test();
@@ -29,6 +28,4 @@ public class Q8 implements sports {
 		double grand = score1+score2;
 		return grand;
 	}
-
-
 }

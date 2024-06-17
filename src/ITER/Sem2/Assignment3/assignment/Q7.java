@@ -2,7 +2,6 @@ package ITER.Sem2.Assignment3.assignment;
 
 public class Q7 {
     static int factorial(int n) {
-        int fac = 1;
         if (n == 1) return n;
         else {
             return n * factorial(n-1);

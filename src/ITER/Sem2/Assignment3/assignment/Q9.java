@@ -10,6 +10,6 @@ public class Q9 {
     }
 
     public static void main(String[] args) {
-        System.out.println(reversed(246387561));
+        System.out.println(reversed(24638));
     }
 }

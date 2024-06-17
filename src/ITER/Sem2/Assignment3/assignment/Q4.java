@@ -1,6 +1,6 @@
 package ITER.Sem2.Assignment3.assignment;
 
-class Box<T>{
+class Box <T> {
     T value;
     Box(T value){
         this.value = value;
@@ -21,10 +21,11 @@ public class Q4 {
         System.out.println("refs1: " + refs1.value);
         System.out.println("refs2: " + refs2.value);
 
-        refs1.setValue("World");
+        refs1.value = "ji";
 
         System.out.println("refs1: " + refs1.value);
         System.out.println("refs2: " + refs2.value);
+
 
         System.out.println("Integer Box");
 
