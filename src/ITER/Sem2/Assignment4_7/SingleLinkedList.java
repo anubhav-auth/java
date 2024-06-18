@@ -150,13 +150,11 @@ public class SingleLinkedList {
                 start = null;
             } else {
                 node temp = start;
-                node prev = start;
-                while (temp.next != null) {
-                    prev = temp;
+                while (temp.next.next != null) {
+
                     temp = temp.next;
                 }
-
-                prev.next = null;
+                temp.next = null;
             }
         }
     }
@@ -244,6 +242,7 @@ public class SingleLinkedList {
 
                 start = prev;
             }
+
         }
 
     }
@@ -256,6 +255,7 @@ public class SingleLinkedList {
         for (int i = 0; i < length - 1; i++) {
             node current = start;
             node nextNode = start.next;
+
             for (int j = 0; j < length - i - 1; j++) {
                 if (current.mark < nextNode.mark) {
                     float temp = current.mark;

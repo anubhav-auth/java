@@ -5,16 +5,16 @@ import java.util.Scanner;
 class Node {
     protected int regd_no;
     protected float mark;
-    protected Node2 next;
-    protected Node2 prev;
+    protected Node next;
+    protected Node prev;
 }
 
 public class DoubleLinkedList {
-    static Node2 start = null;
+    static Node start = null;
 
     public static void create() {
         Scanner sc = new Scanner(System.in);
-        Node2 p = new Node2();
+        Node p = new Node();
         System.out.println("Enter reg_no");
         p.regd_no = sc.nextInt();
         System.out.println("Enter mark");
@@ -22,16 +22,17 @@ public class DoubleLinkedList {
         p.next = null;
         p.prev = null;
         start = p;
-        Node2 q = p;
+        Node q = p;
         System.out.println("Do you want to create more number of nodes(y/n)");
         char ch = sc.next().charAt(0);
         while (ch != 'n') {
-            p = new Node2();
+            p = new Node();
             System.out.println("Enter reg_no");
             p.regd_no = sc.nextInt();
             System.out.println("Enter mark");
             p.mark = sc.nextInt();
             p.next = null;
+
             p.prev = q;
             q.next = p;
             q = p;
@@ -41,7 +42,7 @@ public class DoubleLinkedList {
     }
 
     public static void display() {
-        Node2 p = start;
+        Node p = start;
         while (p != null) {
             System.out.print(p.regd_no + ", " + p.mark + "-->");
             p = p.next;
@@ -50,7 +51,7 @@ public class DoubleLinkedList {
 
     public static void insBeg() {
         Scanner sc = new Scanner(System.in);
-        Node2 p = new Node2();
+        Node p = new Node();
         System.out.println("Enter reg_no");
         p.regd_no = sc.nextInt();
         System.out.println("Enter mark");
@@ -64,18 +65,19 @@ public class DoubleLinkedList {
 
     public static void insEnd() {
         Scanner sc = new Scanner(System.in);
-        Node2 p = new Node2();
+        Node p = new Node();
         System.out.println("Enter reg_no");
         p.regd_no = sc.nextInt();
         System.out.println("Enter mark");
         p.mark = sc.nextInt();
         p.next = null;
+
         if (start == null) {
             p.prev = null;
             start = p;
             return;
         }
-        Node2 temp = start;
+        Node temp = start;
         while (temp.next != null)
             temp = temp.next;
         temp.next = p;
@@ -84,7 +86,7 @@ public class DoubleLinkedList {
 
     public static void insAny() {
         Scanner sc = new Scanner(System.in);
-        Node2 p = new Node2();
+        Node p = new Node();
         System.out.println("Enter reg_no");
         p.regd_no = sc.nextInt();
         System.out.println("Enter mark");
@@ -107,7 +109,7 @@ public class DoubleLinkedList {
             return;
         }
 
-        Node2 temp = start;
+        Node temp = start;
         for (int i = 0; i < pos - 1 && temp != null; i++) {
             temp = temp.next;
         }
@@ -145,7 +147,7 @@ public class DoubleLinkedList {
             start = null;
             return;
         }
-        Node2 temp = start;
+        Node temp = start;
         while (temp.next != null)
             temp = temp.next;
         temp.prev.next = null;
@@ -165,7 +167,7 @@ public class DoubleLinkedList {
                 start.prev = null;
             return;
         }
-        Node2 temp = start;
+        Node temp = start;
         while (temp != null && temp.regd_no != item)
             temp = temp.next;
         if (temp == null) {
@@ -195,7 +197,7 @@ public class DoubleLinkedList {
             return;
         }
 
-        Node2 temp = start;
+        Node temp = start;
         for (int i = 0; temp != null && i < pos; i++) {
             temp = temp.next;
         }
@@ -221,7 +223,7 @@ public class DoubleLinkedList {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the data you need to search");
         int item = sc.nextInt();
-        Node2 temp = start;
+        Node temp = start;
         while (temp != null && temp.regd_no != item) {
             temp = temp.next;
             c++;
